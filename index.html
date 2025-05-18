@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8">
   <title>Nachiket Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nachiket Bari - Portfolio</title>
+  <meta name="description" content="Nachiket Bari – Full Stack Developer Portfolio showcasing modern web applications, services, and contact information.">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Bootstrap + Font Awesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +17,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
   <style>
+  /* Add smooth reveal delay to chained animations */
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+[data-delay="1"] { animation-delay: 0.3s; }
+[data-delay="2"] { animation-delay: 0.6s; }
+[data-delay="3"] { animation-delay: 0.9s; }
+[data-delay="4"] { animation-delay: 1.2s; }
+
+
     /* Global */
     body {
       margin:0; padding:0;
@@ -101,21 +125,46 @@
   </nav>
 
   <!-- Hero Section -->
-  <div class="main-content fade-up" style="animation-delay:0.5s;" id="home">
+  <!-- <div class="main-content fade-up" style="animation-delay:0.5s;" id="home">
     <img src="images/Me.jpg" alt="Nachiket Avatar" class="avatar">
     <div class="hero-text fade-up" style="animation-delay:0.5s;">
       <h1>Crafting Digital Experiences</h1>
       <h2>Full-Stack Developer</h2>
     </div>
     <button class="btn-contact">Get In Touch <i class="fas fa-paper-plane"></i></button>
+  </div> -->
+
+  <!-- Hero Section -->
+<div class="main-content fade-up" style="animation-delay: 0.5s;" id="home">
+  <div style="text-align: center; margin-bottom: 20px;">
+    <img src="images/profile.jpg" alt="Nachiket Avatar"
+         style="width: 231px;
+                height: 231px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
   </div>
+
+  <div class="hero-text fade-up" style="animation-delay: 0.5s;">
+    <!-- <h1>Crafting Digital Experiences</h1>
+    <h2>Full-Stack Developer</h2> -->
+    <h1>Building Interactive & Scalable Solutions</h1>
+<h2>Full-Stack Developer | Problem Solver | Tech Enthusiast</h2>
+
+  </div>
+
+  <!-- <button class="btn-contact">Get In Touch <i class="fas fa-paper-plane"></i></button> -->
+   <button class="btn-contact">Get In Touch</button>
+
+</div>
+
 
   <!-- About Me -->
   <section class="about-me fade-up" style="animation-delay:0.7s;" id="about">
     <h2 class="section-title">About Me</h2>
     <h3 class="about-subtitle">Hello There, I’m Nachiket</h3>
     <p class="about-description">I build robust web applications from the ground up—leveraging Python, Django & MySQL on the backend, and React or Bootstrap on the frontend. Passionate about writing clean code, optimizing performance, and delivering intuitive user experiences. Let’s turn your ideas into scalable, real-world solutions.</p>
-    <a href="resume.pdf" class="btn-about" target="_blank" download>Download My Resume</a>
+    <a href="images/NB+Resume.pdf" class="btn-about" target="_blank" download>Download My Resume</a>
   </section>
 
   <!-- Services Section -->
@@ -135,30 +184,73 @@
   </section>
 
   <!-- Skills Section -->
-  <section class="services fade-up" style="animation-delay:3.1s; background:rgba(0,0,0,0.7);" id="skills">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <p class="section-subtitle">Technologies & tools I excel at</p>
-      <div class="row">
-        <div class="col-md-6 mb-4 fade-up" style="animation-delay:3.3s;">
-          <h6>JavaScript</h6>
-          <div class="progress"><div class="progress-bar" style="width:90%;">90%</div></div>
-        </div>
-        <div class="col-md-6 mb-4 fade-up" style="animation-delay:3.5s;">
-          <h6>Python & Django</h6>
-          <div class="progress"><div class="progress-bar" style="width:85%;">85%</div></div>
-        </div>
-        <div class="col-md-6 mb-4 fade-up" style="animation-delay:3.7s;">
-          <h6>React.js</h6>
-          <div class="progress"><div class="progress-bar" style="width:80%;">80%</div></div>
-        </div>
-        <div class="col-md-6 mb-4 fade-up" style="animation-delay:3.9s;">
-          <h6>SQL & Databases</h6>
-          <div class="progress"><div class="progress-bar" style="width:75%;">75%</div></div>
+<section id="skills" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">My Skills</h2>
+
+    <!-- HTML -->
+    <div class="mb-4">
+      <h5 class="text-uppercase">HTML</h5>
+      <div class="progress mx-auto" style="height: 20px; width: 60%;">
+        <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #24987E;">
+          90%
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- CSS -->
+    <div class="mb-4">
+      <h5 class="text-uppercase">CSS</h5>
+      <div class="progress mx-auto" style="height: 20px; width: 60%;">
+        <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #24987E;">
+          85%
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="mb-4">
+      <h5 class="text-uppercase">JavaScript</h5>
+      <div class="progress mx-auto" style="height: 20px; width: 60%;">
+        <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #24987E;">
+          80%
+        </div>
+      </div>
+    </div>
+
+    <!-- Python -->
+    <div class="mb-4">
+      <h5 class="text-uppercase">Python</h5>
+      <div class="progress mx-auto" style="height: 20px; width: 60%;">
+        <div class="progress-bar" role="progressbar" style="width: 88%; background-color: #24987E;">
+          88%
+        </div>
+      </div>
+    </div>
+
+    <!-- Django -->
+    <div class="mb-4">
+      <h5 class="text-uppercase">Django</h5>
+      <div class="progress mx-auto" style="height: 20px; width: 60%;">
+        <div class="progress-bar" role="progressbar" style="width: 82%; background-color: #24987E;">
+          82%
+        </div>
+      </div>
+    </div>
+
+    <!-- SQL -->
+    <div class="mb-4">
+      <h5 class="text-uppercase">SQL</h5>
+      <div class="progress mx-auto" style="height: 20px; width: 60%;">
+        <div class="progress-bar" role="progressbar" style="width: 86%; background-color: #24987E;">
+          86%
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Testimonials Section -->
   <section class="services fade-up" style="animation-delay:4.3s; background:rgba(0,0,0,0.6);" id="testimonials">
@@ -186,38 +278,108 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  
   <section class="contact fade-up" style="animation-delay:1.9s;" id="contact">
-    <div class="container text-center py-5">
-      <h2 class="section-title">Contact Me</h2>
-      <p class="section-subtitle">Got a project in mind? Let’s collaborate and build something awesome.</p>
-      <div class="row justify-content-center">
-        <div class="col-md-5 col-lg-4 mb-4 fade-up" style="animation-delay:2.1s;"><div class="contact-card"><div class="icon-circle"><i class="fas fa-phone-alt"></i></div><h5 class="card-heading">Call Me</h5><p class="card-text">+91 96656 82131</p></div></div>
-        <div class="col-md-5 col-lg-4 mb-4 fade-up" style="animation-delay:2.3s;"><div class="contact-card"><div class="icon-circle"><i class="fas fa-envelope"></i></div><h5 class="card-heading">Email</h5><p class="card-text">nachiketbari487@gmail.com</p></div></div>
+  <div class="container text-center py-5">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-subtitle">Got a project in mind? Let’s collaborate and build something awesome.</p>
+    <br>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5 col-lg-4 mb-4 fade-up" style="animation-delay:2.1s;">
+        <div> <!-- Removed contact-card class here -->
+          <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+          <h5 class="card-heading">Call Me</h5>
+          <p class="card-text">+91 96656 82131</p>
+        </div>
       </div>
-      <!-- Contact Form -->
-      <div class="contact-form fade-up" style="animation-delay:2.5s;">
-        <form action="#" method="POST">
-          <input type="text" name="full_name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+      <div class="col-md-5 col-lg-4 mb-4 fade-up" style="animation-delay:2.3s;">
+        <div> <!-- Removed contact-card class here -->
+          <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+          <h5 class="card-heading">Email</h5>
+          <p class="card-text">nachiketbari487@gmail.com</p>
+        </div>
       </div>
     </div>
-  </section>
+    
+
+
+<div class="contact-form fade-up" style="animation-delay:2.5s;">
+  <form id="contact-form" action="https://formsubmit.co/nachiketbari487@gmail.com" method="POST">
+    <input type="text" name="full_name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="thank-you" style="display:none; color:#24987E; margin-top:20px; font-weight:600;">
+    ✅ Thank you! Your message has been sent.
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const thankYou = document.getElementById('thank-you');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default submission
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        thankYou.style.display = 'block';
+      } else {
+        alert('There was a problem submitting your form. Please try again.');
+      }
+    });
+  });
+</script>
+
+
+</section>
 
   
 
     <!-- Footer -->
-  <footer class="fade-up" style="animation-delay:5s; background: #111; padding: 40px 20px; text-align: center;">
+  <!-- <footer class="fade-up" style="animation-delay:5s; background: #111; padding: 40px 20px; text-align: center;">
     <p>&copy; 2025 Nachiket. All rights reserved.</p>
     <div>
       <a href="https://github.com/yourgithub" target="_blank" style="margin:0 10px; color:#DDD;"><i class="fab fa-github fa-2x"></i></a>
       <a href="https://linkedin.com/in/yourlinkedin" target="_blank" style="margin:0 10px; color:#0077B5;"><i class="fab fa-linkedin fa-2x"></i></a>
       <a href="https://twitter.com/yourtwitter" target="_blank" style="margin:0 10px; color:#1DA1F2;"><i class="fab fa-twitter fa-2x"></i></a>
     </div>
-  </footer>
+  </footer> -->
+
+  <!-- Footer -->
+<footer class="fade-up" style="animation-delay:5s; background: #111; padding: 40px 20px; text-align: center; color: #DDD;">
+  <p>&copy; 2025 Nachiket. All rights reserved.</p>
+  <p style="margin: 10px 0; font-weight: 600;">
+    Designed and Developed by <span style="color: #24987E;">TeamNT</span>
+  </p>
+  <div>
+    <a href="https://github.com/nachiketbari" target="_blank" style="margin:0 10px; color:#DDD;">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/nachiket-bari-17a907218/" target="_blank" style="margin:0 10px; color:#0077B5;">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="https://twitter.com/yourtwitter" target="_blank" style="margin:0 10px; color:#1DA1F2;">
+      <i class="fab fa-twitter fa-2x"></i>
+    </a>
+  </div>
+</footer>
+
 
   <!-- Back to Top Button -->
   <button id="backToTop" title="Back to Top">↑</button>
